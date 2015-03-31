@@ -29,7 +29,11 @@
                     <next>
                       <block type="movement_forward" id="46">
                         <next>
-                          <block type="movement_left" id="56"></block>
+                          <block type="movement_left" id="56">
+                            <next>
+                              <block type="movement_stop" id="76"></block>
+                            </next>
+                          </block>
                         </next>
                       </block>
                     </next>
