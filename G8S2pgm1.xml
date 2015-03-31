@@ -41,7 +41,51 @@
                         <next>
                           <block type="movement_left" id="56">
                             <next>
-                              <block type="movement_stop" id="76"></block>
+                              <block type="movement_stop" id="76">
+                                <next>
+                                  <block type="movement_stutter" id="114">
+                                    <next>
+                                      <block type="robot_delay" id="125" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="126">
+                                            <field name="NUM">3000</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="movement_left" id="124">
+                                            <next>
+                                              <block type="robot_delay" id="138" inline="true">
+                                                <value name="DELAY">
+                                                  <block type="math_number" id="139">
+                                                    <field name="NUM">2000</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="movement_setmotors" id="137" inline="true">
+                                                    <value name="BOTHMOVLEFT">
+                                                      <block type="math_number" id="147">
+                                                        <field name="NUM">300</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="BOTHMOVRIGHT">
+                                                      <block type="math_number" id="154">
+                                                        <field name="NUM">350</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="movement_stop" id="164"></block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
                             </next>
                           </block>
                         </next>
