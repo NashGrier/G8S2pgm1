@@ -6,25 +6,32 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="1">
+      <block type="movement_forward" id="1"></block>
+    </statement>
+    <next>
+      <block type="robot_delay" id="2" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="3">
+            <field name="NUM">2000</field>
+          </block>
+        </value>
         <next>
-          <block type="robot_delay" id="2" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="3">
-                <field name="NUM">2000</field>
-              </block>
-            </value>
+          <block type="movement_right" id="4">
             <next>
-              <block type="movement_right" id="4">
+              <block type="robot_delay" id="5" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="6">
+                    <field name="NUM">1300</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="robot_delay" id="5" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="6">
-                        <field name="NUM">1300</field>
-                      </block>
-                    </value>
+                  <block type="movement_stop" id="7">
                     <next>
-                      <block type="movement_stop" id="7"></block>
+                      <block type="movement_forward" id="46">
+                        <next>
+                          <block type="movement_left" id="56"></block>
+                        </next>
+                      </block>
                     </next>
                   </block>
                 </next>
@@ -33,6 +40,6 @@
           </block>
         </next>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>
